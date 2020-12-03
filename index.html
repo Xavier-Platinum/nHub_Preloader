@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nHub Preloader</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="preloader">
+        <!-- <img src="/img/logo.png" alt="Load" class="preloader_img"> -->
+        <div class="preloader_img"></div>
+    </div>
+    <div class="content">
+        <h1>Welcome to nHub Foundation</h1>
+    </div>
+    <script>
+        /*window.addEventListener("load", () => {
+            document.querySelector(".preloader").classList.add("loaded");
+        })*/
+        const loader = document.querySelector(".preloader");
+        const init = () => {
+            setTimeout(() => {
+                loader.classList.add("loaded")
+                setTimeout(() => (loader.classList.add("preloader")), 50)
+            }, 4000)
+        }
+        init();
+    </script>
+</body>
+</html>
